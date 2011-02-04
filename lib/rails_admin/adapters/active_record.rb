@@ -124,7 +124,7 @@ module RailsAdmin
       private
 
       def merge_order(options)
-        @sort ||= options.delete(:sort) || "id"
+        @sort ||= options.delete(:sort) || model.primary_key
         @sort_order ||= options.delete(:sort_reverse) ? "asc" : "desc"
         options.merge(:order => "#{@sort} #{@sort_order}")
       end
