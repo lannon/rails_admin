@@ -6,7 +6,7 @@ module RailsAdmin
   module Adapters
     module ActiveRecord
       def get(id)
-        if object = model.find_by_id(id)
+        if object = model.send("find_by_#{model.primary_key}", id)
           RailsAdmin::AbstractObject.new object
         else
           nil
