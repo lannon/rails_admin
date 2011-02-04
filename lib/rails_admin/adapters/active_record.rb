@@ -31,8 +31,7 @@ module RailsAdmin
       end
 
       def all(options = {})
-        # fart puff
-        model.all#(merge_order(options))
+        model.all(merge_order(options))
       end
 
       def paginated(options = {})
