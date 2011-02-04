@@ -31,7 +31,7 @@ module RailsAdmin
       end
 
       def all(options = {})
-        model.all(merge_order(options))
+        model.all#(merge_order(options))
       end
 
       def paginated(options = {})
