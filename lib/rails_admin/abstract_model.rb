@@ -71,6 +71,10 @@ module RailsAdmin
       require 'rails_admin/adapters/active_record'
       self.extend(RailsAdmin::Adapters::ActiveRecord)
     end
+    
+    def primary_key
+      @model.primary_key
+    end
 
     private
 
