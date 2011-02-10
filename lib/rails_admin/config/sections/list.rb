@@ -38,7 +38,7 @@ module RailsAdmin
           # TODO
           # Once composite-primary-keys branch is merged
           # we should use parent.abstract_model.primary_keys.first as the default
-          parent.abstract_model.id
+          :id
         end
 
         register_instance_option(:sort_reverse?) do
